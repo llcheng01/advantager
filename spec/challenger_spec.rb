@@ -17,4 +17,14 @@ describe Challenger do
     end
   end
 
+  describe '#multipliers' do
+    it 'return array of integers that are multipliers of the source' do
+      expect(@challenger.multipliers(2, [10, 5, 20], [])).to eq [20, 10]
+    end
+
+    it 'return empty array when none of the integers in the array is multiplier of the source' do
+      expect(@challenger.multipliers(3, [10, 5, 20], [])).to eq []
+    end
+  end
+
 end
