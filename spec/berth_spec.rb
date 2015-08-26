@@ -15,16 +15,19 @@ describe Berth do
   end
 
   describe '#factor_exist?' do
-    it 'should return true if basename of factor cache exist' do
+    it 'should return true if basename of cache exist' do
       
     end
 
-    it 'should return'
+    it 'should return false if basename of cache does not exist' do
+      
+    end
   end
 
-  describe '#convert_string_name' do
-    it 'should convert integer array into appropiate name' do
-      
+  describe '#convert_to_key' do
+    it 'should convert integer array into appropriate name' do
+      input = [10, 2, 5, 50, 30]
+      expect(@berth.convert_to_key(input)).to eql '2-5-10-30-50'
     end
   end
 
